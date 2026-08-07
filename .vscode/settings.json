@@ -1,0 +1,73 @@
+{
+  // ==================== Python 解释器 ====================
+  "python.defaultInterpreterPath": "C:\\Users\\14758\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+  "python.terminal.activateEnvironment": true,
+
+  // ==================== Python Debugger（no-config debugging）====================
+  "debugpy.debugByLink": true,
+
+  // ==================== Pylance（代码分析，媲美 PyCharm IDE 检视）====================
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.completeFunctionParens": true,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.diagnosticMode": "workspace",
+  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.callArgumentNames": "partial",
+
+  // ==================== 保存时自动格式化（Black）====================
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit",
+      "source.fixAll": "explicit"
+    },
+    "editor.tabSize": 4,
+    "editor.rulers": [88, 120]
+  },
+  "black-formatter.args": ["--line-length", "88"],
+
+  // ==================== Import 自动排序（isort）====================
+  "isort.args": ["--profile", "black", "--line-length", "88"],
+
+  // ==================== Ruff（超快 Linter）====================
+  "ruff.enable": true,
+  "ruff.organizeImports": true,
+
+  // ==================== Mypy 类型检查 ====================
+  "mypy-type-checker.args": ["--ignore-missing-imports"],
+
+  // ==================== 测试（pytest）====================
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+
+  // ==================== 文档注释自动生成 ====================
+  "autoDocstring.docstringFormat": "google",
+  "autoDocstring.generateDocstringOnEnter": true,
+
+  // ==================== 编辑器通用（PyCharm 风格）====================
+  "editor.minimap.enabled": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.renderWhitespace": "boundary",
+  "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": false
+  },
+
+  // ==================== 文件管理 ====================
+  "files.autoSave": "onFocusChange",
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+
+  // ==================== Error Lens（行内错误提示）====================
+  "errorLens.enabled": true,
+  "errorLens.followCursor": "allLines"
+}
